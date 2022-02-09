@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent  {
-
-  constructor() { }
+  allowNewServer = false;
+  constructor() {
+  setTimeout(()=> {
+    this.allowNewServer = true;
+  }, 1000);
+  }
 
 
 }
