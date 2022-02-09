@@ -1,7 +1,8 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button (click)="onCreateServer()" class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <div class="container">
   <div class="row col-xs-12 d-block">
-    <h3>servers works!</h3>
+    <h3 [innerText]= "allowNewServer"></h3>
+    <p>{{serverCreationStatus}}</p>
     <app-server></app-server>
     <app-server></app-server>
   </div>
