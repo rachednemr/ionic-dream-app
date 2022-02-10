@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent  {
   allowNewServer = false;
   serverName = 'Placeholder';
+  username = '';
   serverCreationStatus = 'No Server created!';
   constructor() {
   setTimeout(()=> {
@@ -15,9 +16,11 @@ export class ServersComponent  {
   }, 1000);
   }
   onCreateServer() {
-    this.serverCreationStatus = 'Server was created!';
+    this.serverCreationStatus = 'Server '+this.serverName+' created!';
   }
   onUpdateServerName(event: Event) {
     this.serverName =(<HTMLInputElement>event.target).value;
+  }
+  onUpdateUser(event: Event) {
   }
 }

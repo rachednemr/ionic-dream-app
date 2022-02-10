@@ -14,3 +14,9 @@
     <app-server></app-server>
   </div>
 </div>
+<label>Username: </label>
+<input class="form-control"
+       type="text"
+       [(ngModel)]="username" />
+<p>{{username}}</p>
+<button (click)="username = ''"  class="btn btn-primary" [disabled]="username === ''">Add Server</button>
