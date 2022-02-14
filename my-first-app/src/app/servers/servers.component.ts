@@ -10,15 +10,17 @@ export class ServersComponent  {
   serverCreated = false;
   serverName = 'Placeholder';
   username = '';
+  servers = ['tomCat', 'nginx'];
   serverCreationStatus = 'No Server created!';
   constructor() {
   setTimeout(()=> {
     this.allowNewServer = true;
   }, 1000);
   }
-  onCreateServer() {
+  onCreateServer(event: Event) {
   this.serverCreated = true;
     this.serverCreationStatus = 'Server '+this.serverName+' created!';
+    this.servers.push(this.serverName);
   }
   onUpdateServerName(event: Event) {
     this.serverName =(<HTMLInputElement>event.target).value;

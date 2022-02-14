@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'my-first-app';
+  showSecret = false;
+  logs = [];
+  onToggleSecret() {
+    this.showSecret = !this.showSecret;
+  }
+  onToggleDetails() {
+    this.logs.push(new Date());
+  }
 }

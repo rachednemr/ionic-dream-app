@@ -5,7 +5,7 @@
        [(ngModel)]="serverName" />
 
 <!--<p>{{serverName}}</p>-->
-<button (click)="onCreateServer()" class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button (click)="onCreateServer($event)" class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
 <div class="container">
   <div class="row col-xs-12 d-block">
     <!--<h3 [innerText]= "allowNewServer"></h3>-->
@@ -14,9 +14,7 @@
     <!--<ng-template #noServer>
       <p>No servers was created !</p>
     </ng-template>-->
-
-    <app-server></app-server>
-    <app-server></app-server>
+    <app-server *ngFor="let server of servers"></app-server>
   </div>
 </div>
 <!--<label>Username: </label>
