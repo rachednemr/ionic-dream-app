@@ -10,7 +10,11 @@
   <div class="row col-xs-12 d-block">
     <!--<h3 [innerText]= "allowNewServer"></h3>-->
     <!--<p>{{serverCreationStatus}}</p>-->
-    <p *ngIf="serverCreated">Server {{serverName}} was created! </p>
+    <p *ngIf="serverCreated;">Server {{serverName}} was created! </p>
+    <!--<ng-template #noServer>
+      <p>No servers was created !</p>
+    </ng-template>-->
+
     <app-server></app-server>
     <app-server></app-server>
   </div>
